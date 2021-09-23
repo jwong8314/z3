@@ -488,6 +488,7 @@ namespace opt {
 
         for (unsigned i = 0; i < m_objs.size(); ++i) {
             smt::theory_var v = solver.add_objective(m_objs[i].get());
+            std::cout << "Setup: " << m_objs << "\n"; // puts in the optimization objective
             if (v == smt::null_theory_var) {
                 std::ostringstream out;
                 out << "Objective function '" << mk_pp(m_objs[i].get(), m) << "' is not supported";

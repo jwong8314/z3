@@ -31,6 +31,7 @@ Notes:
 #include "cmd_context/parametric_cmd.h"
 #include "opt/opt_params.hpp"
 #include "model/model_smt2_pp.h"
+#include <stdio.h>
 
 static opt::context& get_opt(cmd_context& cmd, opt::context* opt) {
     if (opt) {
@@ -134,6 +135,7 @@ public:
         if (!is_app(t)) {
             throw cmd_exception("malformed objective term: it cannot be a quantifier or bound variable");
         }
+        printf ("set_next_arg\n");
         get_opt(ctx, m_opt).add_objective(to_app(t), m_is_max);
         ctx.print_success();
     }

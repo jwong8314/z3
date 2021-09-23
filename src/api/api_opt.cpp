@@ -32,6 +32,7 @@ Revision History:
 #include "api/api_util.h"
 #include "api/api_model.h"
 #include "api/api_ast_vector.h"
+#include <assert.h>
 
 
 extern "C" {
@@ -140,6 +141,10 @@ extern "C" {
 
 
     Z3_lbool Z3_API Z3_optimize_check(Z3_context c, Z3_optimize o, unsigned num_assumptions, Z3_ast const assumptions[]) {
+        printf ("-------------------------------\n");
+        printf ("Starting the optimization check\n");
+        printf ("-------------------------------\n");
+        assert (1 == 2);
         Z3_TRY;
         LOG_Z3_optimize_check(c, o, num_assumptions, assumptions);
         RESET_ERROR_CODE();

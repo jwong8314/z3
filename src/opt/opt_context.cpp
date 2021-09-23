@@ -45,6 +45,7 @@ Notes:
 #include "opt/opt_context.h"
 #include "opt/opt_solver.h"
 #include "opt/opt_params.hpp"
+#include <assert.h>
 
 
 namespace opt {
@@ -256,6 +257,7 @@ namespace opt {
         m_hard_constraints.reset();
         scoped_state& s = m_scoped_state;        
         for (unsigned i = 0; i < s.m_objectives.size(); ++i) {
+            printf("Adding soft constraint\n");
             objective& obj = s.m_objectives[i];
             m_objectives.push_back(obj);
             if (obj.m_type == O_MAXSMT) {
@@ -266,6 +268,10 @@ namespace opt {
     }
 
     lbool context::optimize(expr_ref_vector const& _asms) {
+        printf ("-------------------------------\n");
+        printf ("Starting the optimization check\n");
+        printf ("-------------------------------\n");
+        
         scoped_time _st(*this);
         if (m_pareto) {
             return execute_pareto();
@@ -279,6 +285,7 @@ namespace opt {
         expr_ref_vector asms(_asms);
         asms.append(m_scoped_state.m_asms);
         normalize(asms);
+        // std::cout << "Hard Constraints Found: " << m_hard_constraints << "\n";
         if (m_hard_constraints.size() == 1 && m.is_false(m_hard_constraints.get(0))) {
             return l_false;
         }
@@ -301,6 +308,9 @@ namespace opt {
         IF_VERBOSE(1, verbose_stream() << "(optimize:check-sat)\n");
         
         lbool is_sat = s.check_sat(asms.size(),asms.data());
+
+        std::cout << asms.size() << " " << asms.data() << "\n";
+        // std::cout << is_sat << "\n"; // TRUE if nothing
 
         TRACE("opt", s.display(tout << "initial search result: " << is_sat << "\n");); 
         if (is_sat != l_false) {
@@ -805,6 +815,7 @@ namespace opt {
     }
 
     void context::normalize(expr_ref_vector const& asms) {
+        std::cout << "ASMS found: " << asms << "\n";
         expr_ref_vector fmls(m);
         m_model_converter = nullptr;
         to_fmls(fmls);
@@ -1332,7 +1343,8 @@ namespace opt {
                     maxsmt& ms = *m_maxsmts.find(obj.m_id);
                     if (is_lower) {
                         ms.update_upper(r);
-                        TRACE("opt", tout << "update upper from " << r << " to " << ms.get_upper() << "\n";);                        
+                        TRACE("opt", tout << "update upper from " << r << " to " << ms.get_upper() << "\n";);      
+                                         
                     }
                     else {
                         ms.update_lower(r);

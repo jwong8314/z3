@@ -743,10 +743,13 @@ namespace smt {
     template<typename Ext>
     theory_var theory_arith<Ext>::internalize_term_core(app * n) {
         TRACE("arith_internalize_detail", tout << "internalize_term_core:\n" << mk_pp(n, m) << "\n";);
+        std::cout<< "arith_internalize_detail" << "internalize_term_core:\n" << get_id() << " " << mk_pp(n, m) << "\n";
         if (ctx.e_internalized(n)) {
             enode * e    = ctx.get_enode(n);
-            if (is_attached_to_var(e))
+            if (is_attached_to_var(e)){
+                
                 return e->get_th_var(get_id());
+            }
         }
 
         SASSERT(!m_util.is_sub(n));
@@ -790,14 +793,18 @@ namespace smt {
             for (unsigned i = 0; i < n->get_num_args(); ++i) {
                 ctx.internalize(n->get_arg(i), false);
             }
+            std::cout<< "arith_internalize_detail" << "internalize_term_core:\n" << get_id() << " " << mk_pp(n, m) << "\n";
             return mk_var(mk_enode(n));
         }
 
         TRACE("arith_internalize_detail", tout << "before:\n" << mk_pp(n, m) << "\n";);
+        // std::cout<< "arith_internalize_detail" << "before:\n" << mk_pp(n, m) << "\n";
         if (!ctx.e_internalized(n))
             ctx.internalize(n, false);
         TRACE("arith_internalize_detail", tout << "after:\n" << mk_pp(n, m) << "\n";);
+        // std::cout<< "arith_internalize_detail" << "after:\n" << mk_pp(n, m) << "\n";
         enode * e    = ctx.get_enode(n);
+        
         if (!is_attached_to_var(e))
             return mk_var(e);
         else
