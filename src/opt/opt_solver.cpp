@@ -250,8 +250,10 @@ namespace opt {
         // Generally, the hint is not necessarily valid and has to be checked
         // relative to other theories.
         // 
+        TRACE("opt", tout << blocker << '\n';);
         inf_eps val = get_optimizer().maximize(v, blocker, has_shared);
         m_context.get_model(m_last_model);
+        if (m_last_model) TRACE("opt", tout << *m_last_model << '\n';);
         inf_eps val2;
         has_shared = true;
         TRACE("opt", tout << (has_shared?"has shared":"non-shared") << " " << val << " " << blocker << "\n";

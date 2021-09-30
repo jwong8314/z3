@@ -1326,6 +1326,7 @@ namespace smt {
         bool& has_shared,      // determine if pivot involves shared variable
         theory_var& x_i) {     // base variable to pivot with x_j
 
+        TRACE("opt", tout << "Current theory_var: " << x_j << ", inc: " << inc << '\n';);
         x_i = null_theory_var;
         init_gains(x_j, inc, min_gain, max_gain);
         has_shared |= ctx.is_shared(get_enode(x_j));
@@ -1342,6 +1343,7 @@ namespace smt {
             row const & r = m_rows[it->m_row_id];
             theory_var s  = r.get_base_var();
             numeral const & coeff_ij = r[it->m_row_idx].m_coeff;
+            TRACE("opt", tout << "### base_var: " << s << '\n';);
             if (update_gains(inc, s, coeff_ij, min_gain, max_gain) ||
                 (x_i == null_theory_var && !unbounded_gain(max_gain))) {
                 x_i = s;
@@ -1441,6 +1443,7 @@ namespace smt {
 
         SASSERT(!a_ij.is_zero());
 
+        TRACE("opt", tout << "### " << "min_gain: " << min_gain << ", max_gain: " << max_gain << ", safe_gain: " << safe_gain(min_gain, max_gain) << '\n';);
         if (!safe_gain(min_gain, max_gain)) return false;
 
         inf_numeral max_inc = inf_numeral::minus_one();
@@ -1455,6 +1458,7 @@ namespace smt {
         bool is_tighter = false;
         if (is_int(x_i)) den_aij = denominator(a_ij);
         SASSERT(den_aij.is_pos() && den_aij.is_int());
+        TRACE("opt", tout << "### " << "max_inc: " << max_inc << ", den_aij: " << den_aij << '\n';);
 
         if (is_int(x_i) && !den_aij.is_one()) {
             if (min_gain.is_neg()) {

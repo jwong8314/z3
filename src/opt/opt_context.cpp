@@ -257,8 +257,8 @@ namespace opt {
         m_hard_constraints.reset();
         scoped_state& s = m_scoped_state;        
         for (unsigned i = 0; i < s.m_objectives.size(); ++i) {
-            printf("Adding soft constraint\n");
             objective& obj = s.m_objectives[i];
+            std::cout << "Adding soft constraints\n";
             m_objectives.push_back(obj);
             if (obj.m_type == O_MAXSMT) {
                 add_maxsmt(obj.m_id, i);
@@ -315,6 +315,7 @@ namespace opt {
         TRACE("opt", s.display(tout << "initial search result: " << is_sat << "\n");); 
         if (is_sat != l_false) {
             s.get_model(m_model);
+            // std::cout << "Initial model: " << m_model << '\n';
             s.get_labels(m_labels);
             model_updated(m_model.get());
             if (!m_model) {
@@ -328,6 +329,7 @@ namespace opt {
             }
             return is_sat;
         }
+        std::cout << "ASMS: " << asms << '\n';
         s.assert_expr(asms);
         IF_VERBOSE(1, verbose_stream() << "(optimize:sat)\n");
         TRACE("opt", model_smt2_pp(tout, m, *m_model, 0););
@@ -1251,16 +1253,20 @@ namespace opt {
     void context::to_fmls(expr_ref_vector& fmls) {
         m_objective_fns.reset();
         fmls.append(m_hard_constraints);
+        std::cout << "# of objectives: " << m_objectives.size() << '\n';
         for (unsigned i = 0; i < m_objectives.size(); ++i) {
             objective const& obj = m_objectives[i];
             switch(obj.m_type) {
             case O_MINIMIZE:
+                std::cout << "Objective type " << i << ": " << "O_MINIMIZE\n";
                 fmls.push_back(mk_minimize(i, obj.m_term));
                 break;
             case O_MAXIMIZE:
+                std::cout << "Objective type " << i << ": " << "O_MAXIMIZE\n";
                 fmls.push_back(mk_maximize(i, obj.m_term));
                 break;
             case O_MAXSMT: 
+                std::cout << "Objective type " << i << ": " << "O_MAXSMT\n";
                 fmls.push_back(mk_maxsat(i, obj.m_terms.size(), obj.m_terms.data()));
                 break;
             }
@@ -1303,6 +1309,7 @@ namespace opt {
             case O_MINIMIZE: {
                 val = (*m_model)(obj.m_term);
                 TRACE("opt", tout << obj.m_term << " " << val << "\n";);
+                std::cout << "New bound: " << obj.m_term << " " << val << '\n';
                 if (is_numeral(val, r)) {
                     inf_eps val = inf_eps(obj.m_adjust_value(r));
                     TRACE("opt", tout << "adjusted value: " << val << "\n";);
@@ -1318,6 +1325,7 @@ namespace opt {
             case O_MAXIMIZE: {
                 val = (*m_model)(obj.m_term);
                 TRACE("opt", tout << obj.m_term << " " << val << "\n";);
+                std::cout << "New bound: " << obj.m_term << " " << val << '\n';
                 if (is_numeral(val, r)) {
                     inf_eps val = inf_eps(obj.m_adjust_value(r));
                     TRACE("opt", tout << "adjusted value: " << val << "\n";);

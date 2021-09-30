@@ -220,6 +220,7 @@ namespace opt {
             if (is_sat == l_true) {                
                 m_s->maximize_objective(obj_index, bound);
                 m_s->get_model(m_model);
+                TRACE("opt", tout << *m_model << '\n';);
                 SASSERT(m_model);
                 inf_eps obj = m_s->saved_objective_value(obj_index);
                 TRACE("opt", tout << "saved objective: " << obj << "\n";);
@@ -360,6 +361,7 @@ namespace opt {
 
     void optsmt::update_lower_lex(unsigned idx, inf_eps const& v, bool is_maximize) {
         TRACE("opt", tout << v << " lower: " << m_lower[idx] << "\n";);
+        TRACE("opt", tout << "Previous lower: " << m_lower[idx] << "\nCurrent  lower: " << v << '\n';);
         if (v > m_lower[idx]) {
             m_lower[idx] = v;                
             IF_VERBOSE(1, 

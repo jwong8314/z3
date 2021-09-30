@@ -311,6 +311,7 @@ expr_ref_vector solver::get_non_units() {
 
 
 lbool solver::check_sat(unsigned num_assumptions, expr * const * assumptions) {
+    std::cout << "check_sat\n";
     lbool r = l_undef;
     scoped_solver_time _st(*this);
     try {
