@@ -1,0 +1,291 @@
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 57.497s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 106.464s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 50.976s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 104.552s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 49.105s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 122.208s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 432.325s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 118.169s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 39.232s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 110.49s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 41.737s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 90.831s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 31.979s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 92.858s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 32.291s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 92.781s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 34.619s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 108.99s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 35.702s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 100.462s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 126.13s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 77.96s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 44.381s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 94.622s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 32.369s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 91.339s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 46.721s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 74.732s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 104.723s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 72.098s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 64.739s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 84.999s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 138.529s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 92.184s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 33.83s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 92.469s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 89.267s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 90.45s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 487.546s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 67.744s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 23.463s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 58.793s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 21.591s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 56.284s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 66.774s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 60.364s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 34.154s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 58.553s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 24.896s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 51.428s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 21.401s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 51.635s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 28.519s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 57.417s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 2862.83s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 105.83s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 35.573s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 103.936s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 51.397s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 54.877s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 58.68s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 77.062s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 108.461s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 85.563s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 2629.41s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 45.495s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 1871.03s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 98.324s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 1950.3s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 58.614s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 7013.18s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 58.149s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 643.943s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 73.157s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 2084.75s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 2572.44s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 19.73s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 58.625s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 24.804s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 75.955s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 25.022s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 350.856s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 23.001s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 69.365s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 35.763s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 67.962s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 21.552s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 62.922s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 147.423s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 82.968s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 26.689s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 81.314s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 26.734s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 78.539s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 27.195s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:226 ---------
+### max_obj time: 87.965s
+------------------------------------------------
+-------- [my_log] geometric_lex ../src/opt/optsmt.cpp:217 ---------
+### check_sat time: 5373.65s
+------------------------------------------------
