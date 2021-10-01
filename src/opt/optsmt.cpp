@@ -39,6 +39,7 @@ Notes:
 #include "model/model_pp.h"
 #include "ast/rewriter/th_rewriter.h"
 #include "opt/opt_params.hpp"
+#include "util/timer.h"
 
 namespace opt {
 
@@ -211,14 +212,18 @@ namespace opt {
         while (m.inc()) {
             SASSERT(delta_per_step.is_int());
             SASSERT(delta_per_step.is_pos());
+            timer sat_timer;
             is_sat = m_s->check_sat(0, nullptr);
+            TRACE("timer", tout << "### check_sat time: " << sat_timer.get_seconds() << "s\n";);
             TRACE("opt", tout << "check " << is_sat << "\n";
                   tout << "last bound: " << last_bound << "\n";
                   tout << "lower: " << m_lower[obj_index] << "\n";
                   tout << "upper: " << m_upper[obj_index] << "\n";
                   );
             if (is_sat == l_true) {                
+                timer max_obj_timer;
                 m_s->maximize_objective(obj_index, bound);
+                TRACE("timer", tout << "### max_obj time: " << max_obj_timer.get_seconds() << "s\n";);
                 m_s->get_model(m_model);
                 TRACE("opt", tout << *m_model << '\n';);
                 SASSERT(m_model);

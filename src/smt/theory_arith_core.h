@@ -270,6 +270,7 @@ namespace smt {
                 // there is already a theory variable (i.e., name) for m.
                 theory_var v = e->get_th_var(get_id());
                 add_row_entry<false>(r_id, numeral::minus_one(), v);
+                TRACE("arith_internalize_detail", display_row(tout << "row ", r_id, true););
                 return;
             }
         }
@@ -286,6 +287,7 @@ namespace smt {
                 }
                 theory_var v = internalize_numeral(m, val);
                 add_row_entry<true>(r_id, numeral::one(), v);
+                TRACE("arith_internalize_detail", display_row(tout, r_id, true););
                 return;
             }
             numeral val(_val1);
@@ -295,10 +297,12 @@ namespace smt {
                 mk_enode(m);
             }
             add_row_entry<true>(r_id, val, v);
+            TRACE("arith_internalize_detail", display_row(tout, r_id, true););
         }
         else {
             theory_var v = internalize_term_core(m);
             add_row_entry<false>(r_id, numeral::minus_one(), v);
+            TRACE("arith_internalize_detail", display_row(tout, r_id, true););
         }
     }
 
@@ -314,7 +318,9 @@ namespace smt {
         unsigned r_id = mk_row();
         scoped_row_vars _sc(m_row_vars, m_row_vars_top);
         for (expr* arg : *n) {
+            TRACE("arith_internalize_detail", tout << "monomial: " << mk_pp(arg, m) << '\n';);
             if (is_var(arg)) {
+                TRACE("arith_internalize_detail", tout << "is_arg: " << mk_pp(arg, m) << '\n';);
                 std::ostringstream strm;
                 strm << mk_pp(n, m) << " contains a free variable";
                 throw default_exception(strm.str());
@@ -742,7 +748,7 @@ namespace smt {
     */
     template<typename Ext>
     theory_var theory_arith<Ext>::internalize_term_core(app * n) {
-        TRACE("arith_internalize_detail", tout << "internalize_term_core:\n" << mk_pp(n, m) << "\n";);
+        TRACE("arith_internalize_detail", tout << "internalize_term_core:\n" << get_id() << " " << mk_pp(n, m) << "\n";);
         std::cout<< "arith_internalize_detail" << "internalize_term_core:\n" << get_id() << " " << mk_pp(n, m) << "\n";
         if (ctx.e_internalized(n)) {
             enode * e    = ctx.get_enode(n);
@@ -754,11 +760,16 @@ namespace smt {
 
         SASSERT(!m_util.is_sub(n));
         SASSERT(!m_util.is_uminus(n));
+        TRACE("arith_internalize_detail", tout << m_util.is_add(n) << m_util.is_mul(n) << m_util.is_mod(n) << m_util.is_to_int(n) << m_util.is_numeral(n) << (m_util.get_family_id() == n->get_family_id()) << ctx.e_internalized(n) << '\n';);
 
-        if (m_util.is_add(n))
+        if (m_util.is_add(n)) {
+            TRACE("arith_internalize_detail", tout << "is_add: " << mk_pp(n,m) << '\n';);
             return internalize_add(n);
-        else if (m_util.is_mul(n))
+        }
+        else if (m_util.is_mul(n)) {
+            TRACE("arith_internalize_detail", tout << "is_mul: " << mk_pp(n,m) << '\n';); 
             return internalize_mul(n);
+        }
         else if (m_util.is_div(n))
             return internalize_div(n);
         else if (m_util.is_idiv(n))

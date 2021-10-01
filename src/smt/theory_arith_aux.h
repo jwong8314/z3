@@ -1824,6 +1824,7 @@ namespace smt {
                     add_tmp_row_entry<true>(m_tmp_row, it->m_coeff, it->m_var);
             }            
         }
+        TRACE("opt", tout << "base var of m_tmp_row: v" << m_tmp_row.get_base_var() << '\n';);
         max_min_t r = max_min(m_tmp_row, max, maintain_integrality, has_shared);
         if (r == OPTIMIZED) {
             TRACE("opt", tout << mk_pp(e, get_manager()) << " " << (max ? "max" : "min") << " value is: " << get_value(v) << "\n";
